@@ -29,7 +29,7 @@ function generate(){
 
     //loop to choose password charcters for allSymbols
     for(var i = 1; i <= variation; i++){
-        password = password + allSymbols.(Math.floor(Math.random() * Math.floor(allSymbols.length -1))); 
+        password = password + allSymbols.charAt(Math.floor(Math.random() * Math.floor(allSymbols.length -1))); 
     }
     //loop to choose password charcters for lowerPassword
     
