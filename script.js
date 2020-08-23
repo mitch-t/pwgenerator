@@ -14,18 +14,18 @@ function getLower(){
 function generate(){
 
     //setting password length and variation
-    let variation = document.getElementById("lengthPassword").value;
+    variation = document.getElementById("lengthPassword").value;
 
 
     //might need to make an array to hold all the var's or choices?
 
     //possible password value
-    let allSymbols ="123456789!#$%&'()*+,-./:;<=>?@[]`{|}~abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    let lowerPassword ="abcdefghijklmnopqrstuvwxyz";
+    var allSymbols ="123456789!#$%&'()*+,-./:;<=>?@[]`{|}~abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    var lowerPassword ="abcdefghijklmnopqrstuvwxyz";
     //var upperPassword ="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     //var symPassord = "!#$%&'()*+,-./:;<=>?@[]`{|}~";
     //var numPassword ="123456789";
-    let password ="";
+    var password ="";
 
     //loop to choose password charcters for allSymbols
     for(var i = 1; i <= variation; i++){
