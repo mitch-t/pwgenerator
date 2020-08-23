@@ -1,0 +1,28 @@
+#passwordType-text{
+  width:10%
+
+}
+.content{
+    margin-top:5px;
+    margin-bottom:5px;
+    background-color: aquamarine;
+    padding: 5px;
+    width: 90%; 
+    height: 100%  
+}
+
+#display{
+    width: 85%
+   
+}
+
+
+  
+  .center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
