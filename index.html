@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Password Generator</title>
+
+  <!-- bootstrap CSS -->
+  <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+    crossorigin="anonymous"/>
+
+  <!-- CSS link-->
+  <link rel="stylesheet" href="style.css"/>
+  <script src="script.js"></script>
+</head>
+
+<body>
+  
+    <!-- NavBar (copied and pasted from WC3) -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">TM-Password Generator</a>    
+    </nav>
+
+   <!-- Prompt box for user to determine type and length of password-->
+    <button onclick="var confirmPassword=confirm(
+      'It appears you need a password betweeen 8 and 128 characters long?')
+      
+      var lengthPassword = prompt(
+      'Choose how many characters you need in your password: 8 - 128 charcters long.');
+      alert( 'The length of your password is: ' + lengthPassword)
+      var typePassword = prompt(
+      'Choose the type of password you need from the following choices: lowercase, uppercase, numerical, combination');
+      
+      alert('The type of password you need is: ' + typePassword);" 
+    
+    type="button" id="start">Start here</button>
+    
+      
+    <!-- Jumbotron element -->
+    <div class="jumbotron">
+
+      <!--Password type-->
+     <div class = "Passwordchoice">
+      <form action="/action_page.php">
+    <p>Choose type of password:</p>
+    <select name="Password-Choice">
+        <option value="lowerPassword">lowercase</option>
+        <option value="upperPassword">UPPERCASE</option>
+        <option value="allSymbols">Combin@tion</option>
+    </select>
+    </form> 
+    </div>  
+      <!-- centered title -->
+      <h1 class="text-center"><strong>Password Generator</strong></h1>
+
+      
+      
+       <!--setting the password length-->
+<div class ="setting"> 
+    <label for="lengthPassword">Password length</label>
+       <input type="number" id="lengthPassword" min="8" max="128"
+       value= (lengthPassword)/>
+        </div> 
+
+      <div class="content"> 
+
+          <div class="container">
+
+<!--Display window for generated password-->
+            <input class="form-control mr-sm-2" type="text" aria-label="Password" id="display">
+
+<!--Generate password button-->
+    <button onclick="generate()"class="btn btn-outline-success my-2 my-sm-0" type="submit" id="button">Password</button>
+            
+        <div class="row">
+
+            <div class="col-lg-8 col-sm-12 mx-auto">
+
+              </div>
+            </div>
+          </div>
+      </body>
+</html>
+
+
+ <!-- if((typePassword === "lowercase" || typePassword ==="uppercase" || typePassword ==="numerical" || typePassword ==="combination");
