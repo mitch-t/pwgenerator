@@ -45,20 +45,62 @@
     <!-- Jumbotron element -->
     <div class="jumbotron">
 
-      <!--Password type-->
-     <div class = "Passwordchoice">
-      <form action="/action_page.php">
-    <p>Choose type of password:</p>
-    <select name="Password-Choice">
-        <option value="lowerPassword">lowercase</option>
-        <option value="upperPassword">UPPERCASE</option>
-        <option value="allSymbols">Combin@tion</option>
-    </select>
-    </form> 
-    </div>  
       <!-- centered title -->
       <h1 class="text-center"><strong>Password Generator</strong></h1>
+      
+     <!-- Uppercase Check -->
+  <div class = "boxes">
+<div class="form-check">
+  <input
+    class="form-check-input"
+    type="checkbox"
+    value=""
+    id="uppercase"
+  />
+  <label class="form-check-label" for="flexCheckDefault">
+    UPPERCASE
+  </label>
+</div>
 
+   <!-- lowercase Check -->
+<div class="form-check">
+  <input
+    class="form-check-input"
+    type="checkbox"
+    value=""
+    id="lowercase"
+  />
+  <label class="form-check-label" for="flexCheckDefault">
+    lowercase
+  </label>
+</div>
+</div>
+<!-- Numbers Check -->
+<div class="form-check">
+  <input
+    class="form-check-input"
+    type="checkbox"
+    value=""
+    id="numbers"
+  />
+  <label class="form-check-label" for="flexCheckDefault">
+    Numbers
+  </label>
+</div>
+
+<!-- symbols Check -->
+<div class="form-check">
+  <input
+    class="form-check-input"
+    type="checkbox"
+    value=""
+    id="symbols"
+  />
+  <label class="form-check-label" for="flexCheckDefault">
+    symbols
+  </label>
+</div>
+      </section>
       
       
        <!--setting the password length-->
@@ -89,4 +131,3 @@
 </html>
 
 
- <!-- if((typePassword === "lowercase" || typePassword ==="uppercase" || typePassword ==="numerical" || typePassword ==="combination");
