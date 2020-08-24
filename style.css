@@ -1,7 +1,4 @@
-#passwordType-text{
-  width:10%
 
-}
 .content{
     margin-top:5px;
     margin-bottom:5px;
@@ -12,10 +9,14 @@
 }
 
 #display{
-    width: 85%  
+    width: 90%  
 }
 
-    
+ .form-check{
+  background-color: aliceblue;
+  width: 20%
+}
+
   .center {
     margin: 0;
     position: absolute;
