@@ -2,7 +2,6 @@
 <html lang="en-us">
 
 <head>
-
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -21,58 +20,80 @@
 </head>
 
 <body>
-  
     <!-- NavBar (copied and pasted from WC3) -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <a class="navbar-brand" href="#">TM-Password Generator</a>    
     </nav>
-
-   <!-- Prompt box for user to determine type and length of password-->
-    <button onclick="var confirmPassword=confirm(
-      'It appears you need a password betweeen 8 and 128 characters long?')
-      
-      var lengthPassword = prompt(
-      'Choose how many characters you need in your password: 8 - 128 charcters long.');
-      alert( 'The length of your password is: ' + lengthPassword)
-
-      var typePassword = prompt(
-      'Choose the type of password you need from the following choices: lowercase, uppercase, numerical, combination');
-
-      
-      alert('The type of password you need is: ' + typePassword);" 
     
-    type="button" id="start">Start here</button>
-    
-      
     <!-- Jumbotron element -->
     <div class="jumbotron">
 
-      <!--Password type-->
-     <div class = "Passwordchoice">
-      <form action="/action_page.php">
-    <p>Choose type of password:</p>
-    <select name="Password-Choice">
-        <option value="lowerPassword">lowercase</option>
-        <option value="upperPassword">UPPERCASE</option>
-        <option value="allSymbols">Combin@tion</option>
-    </select>
-    </form> 
-    </div>  
       <!-- centered title -->
       <h1 class="text-center"><strong>Password Generator</strong></h1>
 
-      
-      
+      <!--Password types-->
+     <!-- Uppercase Check -->
+  <div class = "boxes">
+<div class="form-check">
+  <input
+    class="form-check-input"
+    type="checkbox"
+    id="uppercaseCheck"
+    checked = "checked"
+  />
+  <label class="form-check-label" for="flexCheckDefault">
+    UPPERCASE
+  </label>
+</div>
+
+   <!-- lowercase Check -->
+<div class="form-check">
+  <input
+    class="form-check-input"
+    type="checkbox"
+    id="lowercaseCheck"
+    checked = "checked"
+  />
+  <label class="form-check-label" for="flexCheckDefault">
+    lowercase
+  </label>
+</div>
+
+<!-- Numbers Check -->
+<div class="form-check">
+  <input
+    class="form-check-input"
+    type="checkbox"
+    id="numbersCheck"
+    checked = "checked"
+  />
+  <label class="form-check-label" for="flexCheckDefault">
+    Numbers
+  </label>
+</div>
+
+<!-- symbols Check -->
+<div class="form-check">
+  <input
+    class="form-check-input"
+    type="checkbox"
+    id="symbolsCheck"
+    checked = "checked"
+  />
+  <label class="form-check-label" for="flexCheckDefault">
+    symbols
+  </label>
+</div>
+<br/>
        <!--setting the password length-->
 <div class ="setting"> 
-    <label for="lengthPassword">Password length</label>
-       <input type="number" id="lengthPassword" min="8" max="128"
-       value= (lengthPassword)/>
+    <label for="lengthPassword">Length</label>
+       <input type="number" id="lengthPassword" min="6" max="26">
         </div> 
-
+       
       <div class="content"> 
 
-          <div class="container">
+          
 
 <!--Display window for generated password-->
             <input class="form-control mr-sm-2" type="text" aria-label="Password" id="display">
@@ -86,9 +107,9 @@
 
               </div>
             </div>
-          </div>
+        
+      </div>
       </body>
 </html>
 
 
- <!-- if((typePassword === "lowercase" || typePassword ==="uppercase" || typePassword ==="numerical" || typePassword ==="combination");

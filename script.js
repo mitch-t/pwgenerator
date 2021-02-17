@@ -1,43 +1,53 @@
-//Start button prompt
 
-document.getElementById("start").addEventListener("click", function(){
-
-    document.getElementById("prompt")
-})
-//generate a lowercase password
-function getLower(){
- 
-    
-}
+ let lowerPassword ="abcdefghijklmnopqrstuvwxyz";
+ let upperPassword ="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+ let symPassord = "!#$%&'()*+,-./:;<=>?@[]`{|}~";
+ let numPassword ="0123456789";
+ let include ="";
 
 //generate a random password
 function generate(){
 
-    //setting password length and variation
-    let variation = document.getElementById("lengthPassword").value;
-
-
-    //might need to make an array to hold all the var's or choices?
-
-    //possible password value
-    let allSymbols ="123456789!#$%&'()*+,-./:;<=>?@[]`{|}~abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    let lowerPassword ="abcdefghijklmnopqrstuvwxyz";
-    //var upperPassword ="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    //var symPassord = "!#$%&'()*+,-./:;<=>?@[]`{|}~";
-    //var numPassword ="123456789";
-    let password ="";
-
-    //loop to choose password charcters for allSymbols
-    for(var i = 1; i <= variation; i++){
-        password = password + allSymbols.(Math.floor(Math.random() * Math.floor(allSymbols.length -1))); 
-    }
-    //loop to choose password charcters for lowerPassword
+     //setting password length and variation
+     const variation = document.getElementById("lengthPassword")
+     const upper = document.getElementById("uppercaseCheck");
+     const lower = document.getElementById("lowercaseCheck");
+     const num = document.getElementById("numbersCheck");
+     const sym = document.getElementById("symbolsCheck");
     
-
-    //for(var i= 1; i <= lowPassword; i++){
-        //password = password + lowerPassword.charAt(Math.floor(Math.random() * Math.floor(lowerPassword.length -1)));     }
-    //document.getElementsByClassName("PasswordChoice").value = password;
-    //document.getElementById("lengthPassword").value = password;
-    //password to display area
+   //conditional statements
+     if(upper.checked){
+        include += upperPassword;
+     }
+    if(upper.uncheked){
+        include
+    }
+     if(lower.checked){
+        include += lowerPassword;
+     }
+     if(lower.uncheked){
+        include
+     }
+     if(num.checked){
+        include += numPassword;
+     }
+     if(num.uncheked){
+        include
+     }
+     if(sym.checked){
+        include += symPassord;
+     }
+     if(sym.uncheked){
+        include
+     }
+     let password ="";
+     let passwordLength = parseInt(variation.value);
+    
+    //loop to choose password charcters 
+    for(var i = 0; i < passwordLength; i++){
+        var random = Math.floor(Math.random() * include.length);
+        password += include[random];
+        
+    //Password display
     document.getElementById("display").value = password;
-}
+}}

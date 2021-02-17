@@ -3,16 +3,16 @@
 
 }
 .content{
-    margin-top:5px;
-    margin-bottom:5px;
+    margin:2%;
+    
     background-color: aquamarine;
-    padding: 5px;
+    padding: 2%;
     width: 90%; 
     height: 100%  
 }
 
 #display{
-    width: 85%  
+    width: 100%  
 }
 
     
@@ -24,3 +24,8 @@
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
   }
+
+.form-check{
+  background-color: aliceblue;
+  width: 35%
+}
